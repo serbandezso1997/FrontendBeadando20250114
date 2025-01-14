@@ -1,0 +1,16 @@
+{
+"menuItems":
+    [
+        {"link":"login", "text":"Belépés"},
+        {"link":"registration", "text":"Regisztrálás"},
+        {"link":"products", "text":"Termékeink"}
+    ],
+"columns":[
+    {"key":"userId", "text":"Felhasználói Azonosító","type":"number"},
+    {"key":"category", "text":"Kategória","type":"number"},
+    {"key":"description", "text":"Leírás","type":"text"},
+    {"key":"id", "text":"Azonosító","type":"text"},
+    {"key":"name", "text":"Megnevezés","type":"text"},
+    {"key":"price", "text":"Ár","type":"text"}
+    ]
+}

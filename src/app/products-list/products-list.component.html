@@ -1,0 +1,57 @@
+<!-- {{albums|json}}
+ {{columns|json}}
+ <div class="row">
+    <div *ngFor="let oszlop of columns" class="col">
+        {{oszlop.text}}
+
+    </div>
+ -->
+
+ <!-- <div *ngFor="let album of albums" class="row">
+    <div *ngFor="let oszlop of columns" class="col">
+        {{album[oszlop.key]}}
+
+    </div>
+    <div *ngFor="let album of albums" class="row">
+      <div class="col">
+        <button type="button" class="btn btn-primary">Küldés</button>
+
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-warning">Módosítás</button>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-danger">Törlés</button>
+      </div>
+   </div>
+    </div>
+ </div>
+
+
+{{base.url|json}} -->
+
+<div class="row">
+  <!-- Oszlopok címsorai -->
+  <div *ngFor="let oszlop of columns" class="col">
+    <strong>{{ oszlop.text }}</strong>
+  </div>
+</div>
+
+<div *ngFor="let album of albums" class="row mb-2">
+  <!-- Album adatai -->
+  <div *ngFor="let oszlop of columns" class="col">
+    {{ album[oszlop.key] }}
+  </div>
+
+  <!-- Gombok az albumhoz -->
+  <div class="col">
+    <button type="button" class="btn btn-primary" >Küldés</button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-warning" >Módosítás</button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-danger" >Törlés</button>
+  </div>
+</div>
+
