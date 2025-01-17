@@ -1,5 +1,7 @@
+import { ProductsListComponent } from './../products-list/products-list.component';
 import { Component } from '@angular/core';
 import { ConfigService } from '../config.service';
+
 
 @Component({
   selector: 'app-nav',
@@ -16,6 +18,8 @@ export class NavComponent {
     this.config.getLinks().subscribe(
       (res:any)=>this.links=res["menuItems"]
     )
+
+
   }
 
   setLang(lang:string){
@@ -23,4 +27,21 @@ export class NavComponent {
     this.config.setLang(lang)
     this.dropClose=true
   }
+
+
+  // gombBeallitasa(lang:string){
+  //   this.lang=lang=="hu"?"Magyar":"English"
+  //   this.config.setLang(lang)
+  //   this.dropClose=true
+
+  //   if(lang == "hu"){
+  //     this.product.gombAtallit = true
+  //   }
+  //   else{
+  //     this.product.gombAtallit = true
+  //   }
+  // }
+
+
+
 }
