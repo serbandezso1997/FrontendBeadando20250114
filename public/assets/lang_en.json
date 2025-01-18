@@ -2,7 +2,6 @@
     "menuItems":
         [
             {"link":"login", "text":"Login"},
-            {"link":"registration", "text":"Registration"},
             {"link":"products", "text":"Products"}
         ],
 
@@ -11,5 +10,15 @@
     {"key":"category", "text":"Category","type":"number"},
     {"key":"description", "text":"Description","type":"text"},
     {"key":"price", "text":"Price","type":"number"}
+    ],
+   "ModositasGmb" :[
+      {"link":"editbtn", "text":"Edit"}
+
+    ],
+    "HozzaAdasGmb" :[
+      {"link":"hozzaadgmb", "text":"Add"}
+    ],
+    "TorlesGmb":[
+      {"link":"deletedgmb", "text":"Delete"}
     ]
     }

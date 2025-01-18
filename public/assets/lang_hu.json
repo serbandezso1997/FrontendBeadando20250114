@@ -1,14 +1,25 @@
 {
 "menuItems":
-    [
-        {"link":"login", "text":"Belépés"},
-        {"link":"registration", "text":"Regisztrálás"},
-        {"link":"products", "text":"Termékeink"}
-    ],
+        [
+            {"link":"login", "text":"Belépés"},
+            {"link":"products", "text":"Termékek"}
+        ],
 "columns":[
     {"key":"name", "text":"Megnevezés","type":"text"},
     {"key":"category", "text":"Kategória","type":"number"},
     {"key":"description", "text":"Leírás","type":"text"},
     {"key":"price", "text":"Ár","type":"number"}
+    ],
+    "ModositasGmb" :[
+      {"link":"editbtn", "text":"Módosítás"}
+
+    ],
+
+    "HozzaAdasGmb" :[
+      {"link":"addbtn", "text":"Hozzáadás"}
+    ],
+
+    "TorlesGmb":[
+      {"link":"deletebtn", "text":"Tőrlés"}
     ]
 }

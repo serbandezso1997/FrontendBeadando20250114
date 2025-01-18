@@ -14,13 +14,18 @@ import { Subject } from 'rxjs';
 export class ProductsListComponent {
   // albums:any=[]
   // szortirozottAdatok = new Subject()
-  columns:any
+  addAddColumn:any
+  addEditColumn:any
+  addDeleteColumn:any
+
   items:any=[]
+  columns:any=[]
   oszlopok=["name","category","description","price"]
   adattomb:any=[]
   HozzaAdasSzoveg="Hozzáadás"
   ModositasSzoveg="Módosítás"
   TorlesSzoveg="Tőrlés"
+
 // A kétnyelvűséghez
   links:any
   dropClose=true
@@ -38,32 +43,27 @@ export class ProductsListComponent {
       {
 
 
-        //adatok betöltése
-    //     this.base.getAll().subscribe(
-    //       (res)=>this.cikkek=res
-    //     )
-
-
-    // this.base.getAlbums().subscribe(
-    //   (res)=> this.albums=res
-    // )
-    // this.config.getLinks().subscribe(
-    //   (res:any)=>this.columns=res["columns"]
-    // )
-
-
-    // this.gombBeallitasa
+    //a base service getAll metódusát meghívva átadjuk a cikkeket
     this.base.getAll().subscribe(
       (res)=>this.cikkek=res
     )
 
+
     this.config.getLinks().subscribe(
-      (res:any)=>this.links=res["menuItems"]
+      (res:any)=>this.addAddColumn=res["HozzaAdasGmb"],
+
+
+    )
+    this.config.getLinks().subscribe(
+      (res:any)=>this.addEditColumn=res["ModositasGmb"],
+
     )
 
     this.config.getLinks().subscribe(
-      (res:any)=>this.columns=res["columns"]
+      (res:any)=>this.addDeleteColumn=res["TorlesGmb"],
+
     )
+    console.log(this.links)
 
   }
 
@@ -101,26 +101,6 @@ export class ProductsListComponent {
 
   }
 
-
-
-
-  // adatokMegjelenitese(){
-  //   return this.http.get(this.base.url).subscribe(
-  //     (res)=>this.albums=res
-  //   )
-  // }
-
-//   constructor(private firebaseService: FirebaseDataService) {}
-
-//   ngOnInit(): void {
-//     this.firebaseService.getData('items').subscribe((data => {
-//         this.items = data;
-//     });
-// }
-
-// addData(): void {
-//   this.firebaseService.addData('items', { name: 'New Item', value: 42 });
-// }
 
 
 

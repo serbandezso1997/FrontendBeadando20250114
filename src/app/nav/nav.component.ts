@@ -18,6 +18,7 @@ export class NavComponent {
     this.config.getLinks().subscribe(
       (res:any)=>this.links=res["menuItems"]
     )
+    console.log(this.links)
 
 
   }

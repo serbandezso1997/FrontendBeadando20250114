@@ -1,94 +1,5 @@
-<!-- {{albums|json}}
- {{columns|json}}
- <div class="row">
-    <div *ngFor="let oszlop of columns" class="col">
-        {{oszlop.text}}
 
-    </div>
- -->
-
- <!-- <div *ngFor="let album of albums" class="row">
-    <div *ngFor="let oszlop of columns" class="col">
-        {{album[oszlop.key]}}
-
-    </div>
-    <div *ngFor="let album of albums" class="row">
-      <div class="col">
-        <button type="button" class="btn btn-primary">Küldés</button>
-
-      </div>
-      <div class="col">
-        <button type="button" class="btn btn-warning">Módosítás</button>
-      </div>
-      <div class="col">
-        <button type="button" class="btn btn-danger">Törlés</button>
-      </div>
-   </div>
-    </div>
- </div>
-
-
-{{base.url|json}} -->
-
-<!-- <div class="row">
-  <!-- Oszlopok címsorai -->
-  <!-- <div *ngFor="let oszlop of columns" class="col">
-    <strong>{{ oszlop.text }}</strong>
-  </div>
-</div> -->
-
-<!-- <div *ngFor="let album of albums" class="row mb-2"> -->
-  <!-- Album adatai -->
-  <!-- <div *ngFor="let oszlop of columns" class="col">
-    {{ album[oszlop.key] }}
-  </div> -->
-
-  <!-- Gombok az albumhoz -->
-  <!-- <div class="col">
-    <button type="button" class="btn btn-primary" >Küldés</button>
-  </div>
-  <div class="col">
-    <button type="button" class="btn btn-warning" >Módosítás</button>
-  </div>
-  <div class="col">
-    <button type="button" class="btn btn-danger" >Törlés</button>
-  </div>
-</div> -->
-
-<!-- <div class="row">
-  <div *ngFor="let oszlop of oszlopok" class="col">
-      {{oszlop}}
-  </div>
-  <div class="col">
-      Actions
-  </div>
-</div> -->
-
-
-
-<!-- Adatok megjelenítése -->
-<!-- <div *ngFor="let cikk of cikkek" class="row">
-  <div *ngFor="let oszlop of oszlopok" class="col">
-      <input [(ngModel)]="cikk[oszlop]" type="text" class="form-control">
-  </div>
-  <div class="col">
-    <button (click)="updateData(cikk)" type="button" class="btn btn-primary">Edit</button>
-    <button (click)="deleteData(cikk)" type="button" class="btn btn-primary ms-2">Delete</button>
-  </div>
-</div> -->
-
-
-
-<!----------------------------------------------------------------->
-<!-- <div class="row">
-  <div *ngFor="let oszlop of oszlopok" class="col">
-      {{oszlop}}
-  </div>
-  <div class="col">
-      Actions
-  </div>
-</div> -->
-
+Ha az adatok nem jelennek meg kérem frissítsen rá az oldalra.
 <div class="row">
   <div *ngFor="let oszlop of columns" class="col">
       {{oszlop.text}}
@@ -101,8 +12,8 @@
   <div *ngFor="let oszlop of oszlopok" class="col">
       <input [(ngModel)]="newCikk[oszlop]" type="text" class="form-control">
   </div>
-  <div class="col">
-      <button (click)="newData()" type="button" class="btn btn-primary">{{HozzaAdasSzoveg}}</button>
+  <div *ngFor="let menu of addAddColumn" class="col">
+      <button [routerLink]="menu.link" (click)="newData()" type="button" class="btn btn-primary">{{menu.text}}</button>
   </div>
 </div>
 
@@ -111,17 +22,19 @@
   <div *ngFor="let oszlop of oszlopok" class="col">
       <input [(ngModel)]="cikk[oszlop]" type="text" class="form-control">
   </div>
-  <div class="col">
-      <button (click)="updateData(cikk)" type="button" class="btn btn-primary">Módosítás</button>
-      <button (click)="deleteData(cikk)" type="button" class="btn btn-primary ms-2">Tőrlés</button>
+  <div *ngFor="let menu of addEditColumn " class="nav-item" class="col">
+    <button [routerLink]="menu.link" (click)="updateData(cikk)" type="button" class="btn btn-primary">{{menu.text}}</button>
+  </div>
+  <div *ngFor="let menu of addDeleteColumn" class="nav-item" class="col">
+    <button [routerLink]="menu.link" (click)="deleteData(cikk)" type="button" class="btn btn-primary">{{menu.text}}</button>
   </div>
 
 </div>
-<div class="adatbazisGomb">
-  <button (click)="showDatas()" type="button" class="btn btn-primary">Adatok megjelenítése</button>
-</div>
 
-{{gombAtallit}}
+
+
+
+
 
 
 
