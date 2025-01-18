@@ -17,6 +17,7 @@ export class ProductsListComponent {
   addAddColumn:any
   addEditColumn:any
   addDeleteColumn:any
+  errMessage:any
 
   items:any=[]
   columns:any=[]
@@ -49,6 +50,7 @@ export class ProductsListComponent {
     )
 
 
+
     this.config.getLinks().subscribe(
       (res:any)=>this.addAddColumn=res["HozzaAdasGmb"],
 
@@ -61,6 +63,16 @@ export class ProductsListComponent {
 
     this.config.getLinks().subscribe(
       (res:any)=>this.addDeleteColumn=res["TorlesGmb"],
+
+    )
+
+    this.config.getLinks().subscribe(
+      (res:any)=>this.columns=res["columns"],
+
+    )
+
+    this.config.getLinks().subscribe(
+      (res:any)=>this.errMessage=res["hibauzenet"],
 
     )
     console.log(this.links)

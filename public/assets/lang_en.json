@@ -1,7 +1,7 @@
 {
     "menuItems":
         [
-            {"link":"login", "text":"Login"},
+            {"link":"home", "text":"Home"},
             {"link":"products", "text":"Products"}
         ],
 
@@ -20,5 +20,13 @@
     ],
     "TorlesGmb":[
       {"link":"deletedgmb", "text":"Delete"}
+    ],
+
+    "koszonto":[
+      {"link":"welcome", "text":"Welcome to my website."}
+    ],
+
+    "hibauzenet":[
+      {"link":"err", "text":"Please refresh the website if the data doesn't appear."}
     ]
     }

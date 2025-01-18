@@ -1,7 +1,7 @@
 {
 "menuItems":
         [
-            {"link":"login", "text":"Belépés"},
+            {"link":"home", "text":"Főoldal"},
             {"link":"products", "text":"Termékek"}
         ],
 "columns":[
@@ -21,5 +21,11 @@
 
     "TorlesGmb":[
       {"link":"deletebtn", "text":"Tőrlés"}
+    ],
+    "koszonto":[
+      {"link":"welcome", "text":"Üdvözöllek a weboldalamon."}
+    ],
+    "hibauzenet":[
+      {"link":"err", "text":"Ha az adatok nem jelennek meg, kérem frissítse az oldalt."}
     ]
 }
